@@ -2,8 +2,11 @@ package Recursion;
 
 public class RecursiveVsIterative {
     /*
+        recursion used when recursion especially in the cases we know
+        that a problem divided into similar sub problem
+        push and pop in stack take time
 
-
+        iteration is space efficient and time efficient because no stack memory
 
      */
     public static void main(String[] args) {
