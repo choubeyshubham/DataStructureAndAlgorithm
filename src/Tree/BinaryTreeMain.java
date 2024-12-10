@@ -51,7 +51,7 @@ public class BinaryTreeMain {
         N4.right=N9;
         binaryTree.root=N1;
 
-        binaryTree.inOrder(binaryTree.root);
+        binaryTree.search("N5");
 
         
     }
