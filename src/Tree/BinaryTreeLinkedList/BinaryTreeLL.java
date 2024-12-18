@@ -130,15 +130,15 @@ public class BinaryTreeLL {
     public void deleteDeepestNode() {
         Queue<BinaryNode> queue = new LinkedList<BinaryNode>();
         queue.add(root);
-        BinaryNode previousNode,presentNode=null;
+        BinaryNode previousNode, presentNode = null;
         while (!queue.isEmpty()) {
             previousNode = presentNode;
             presentNode = queue.remove();
-            if (presentNode.left == null ) {
-                previousNode.right=null;
+            if (presentNode.left == null) {
+                previousNode.right = null;
                 return;
-            }else if (presentNode.right == null) {
-                presentNode.left=null;
+            } else if (presentNode.right == null) {
+                presentNode.left = null;
                 return;
             }
             queue.add(presentNode.left);
@@ -148,17 +148,17 @@ public class BinaryTreeLL {
     }
 
     //Delete Given Node
-    public void deleteNode(String value){
+    public void deleteNode(String value) {
         Queue<BinaryNode> queue = new LinkedList<BinaryNode>();
         queue.add(root);
         while (!queue.isEmpty()) {
             BinaryNode presentNode = queue.remove();
             if (presentNode.value == value) {
-                presentNode.value=getDeepestNode().value;
+                presentNode.value = getDeepestNode().value;
                 deleteDeepestNode();
                 System.out.println("Successfully deleted");
                 return;
-            }else {
+            } else {
                 if (presentNode.left != null) {
                     queue.add(presentNode.left);
                 }
@@ -166,13 +166,13 @@ public class BinaryTreeLL {
                     queue.add(presentNode.right);
                 }
             }
-            System.out.println( "The node is not available in Tree");
+            System.out.println("The node is not available in Tree");
         }
     }
 
     //Delete whole binary tree
     public void deleteBT() {
-        root=null;
+        root = null;
         System.out.println("Binary tree is deleted");
     }
 
