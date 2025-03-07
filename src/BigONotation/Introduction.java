@@ -20,6 +20,9 @@ public class Introduction {
     O(N3) cube time complexity
 
 
+    Different terms of input
+    eg add and multiply in for loop
+    it will be O(a+b) not O(n)
 
 
 
