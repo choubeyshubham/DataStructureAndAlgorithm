@@ -2,7 +2,7 @@ package Arrays;
 
 import java.util.Arrays;
 
-public class Arrayss {
+public class ArraysPractice {
 
     /*
 
