@@ -18,11 +18,30 @@ public class SinglyLL {
         return head;
     }
 
-    public Node insertSinglyLL(int nodeValue) {
-
-
-        return null;
-
+    public void insertSinglyLL(int nodeValue,int loc) {
+        Node node = new Node();
+        node.value= nodeValue;
+        if (head == null) {
+            createSinglyLL(nodeValue);
+            return;
+        } else if (loc==0) {
+            node.next=head;
+            head=node;
+        } else if (loc>=size) {
+            node.next=null;
+            tail.next=node;
+            tail=node;
+        }else {
+            Node tempNode=head;
+            int index=0;
+            while (index < loc - 1) {
+                tempNode=tempNode.next;
+                index++;
+            }
+            Node nextNode=tempNode.next;
+            tempNode.next=node;
+            node.next=nextNode;
+        }
     }
 
 
