@@ -2,7 +2,7 @@ package PracticeQuestions.Array;
 
 import java.util.Arrays;
 
-public class Triplet {
+public class ProductTriplet {
     /*
         Input:  arr[ ] = [10, 3, 5, 6, 20]
 Output: 1200
