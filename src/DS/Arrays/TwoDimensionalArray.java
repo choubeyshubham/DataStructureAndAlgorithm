@@ -8,10 +8,10 @@ public class TwoDimensionalArray {
 
      */
 
-    static int[][] arr = null;
+    public static int[][] arr = null;
 
     public TwoDimensionalArray(int numOfRow, int numOfColumn) {
-        this.arr = new int[numOfRow][numOfColumn];
+        arr = new int[numOfRow][numOfColumn];
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[0].length; j++) {
                 arr[i][j] = Integer.MIN_VALUE;
@@ -46,13 +46,13 @@ public class TwoDimensionalArray {
     public void traverseArray(){//O(n2)
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[0].length; j++) {
-                System.out.print(arr[i][j]);
+                System.out.print(arr[i][j]+"\t");
             }
             System.out.println();
         }
     }
 
-    //Searching a single value in a 2D Array
+    //Searching a single value in a 2D Array  //O(n2)
     public void searchingValue(int value){
         for (int i = 0; i < arr.length; i++) {
             for(int j = 0; j < arr[0].length; j++) {
