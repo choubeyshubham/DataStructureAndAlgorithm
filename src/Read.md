@@ -20,10 +20,10 @@ Static
 Array
 Dynamic
 LinkedList
-Stack
-Queue
+DS.Stack
+DS.Queue
 Non Linear
-Tree
+DS.Tree
 Graph
 =========================
 Types of Algorithm
