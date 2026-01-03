@@ -8,37 +8,24 @@ public class Main {
 
     public static void main(String[] args) {
 
+        DPMemo dpMemo = new DPMemo();
     HashMap<Integer,Integer> map=new HashMap<Integer,Integer>();
-//    System.out.println(fibMemo(6,map));
-    System.out.println(fibTab(6));
+    System.out.println(dpMemo.fibMemo(6,map));
+    System.out.println(dpMemo.fibTab(6));
+
+
+// ---------------Number Factor
+
+    NumberOfFactor np=new NumberOfFactor();
+        System.out.println(np.numberFactorTopDown(4));
+
+        System.out.println(np.numberFactorDownTop(4));
 
 
     }
 
-    public static int fibMemo(int n, HashMap<Integer,Integer> memo){
-        if (n==1) return 0;
-        if(n==2) return 1;
-        if(!memo.containsKey(n)){
-            memo.put(n,(fibMemo(n-1,memo)+fibMemo(n-2,memo)));
-        }
-        return memo.get(n);
 
-    }
 
-    // Tabulation
-    public static int fibTab(int n){
-        ArrayList<Integer> tb=new ArrayList<Integer>();
-        tb.add(0);
-        tb.add(1);
-        for (int i=2;i<=n-1;i++){
-            int n1 = tb.get(i-1);
-            int n2 = tb.get(i-2);
-            tb.add(n1+n2);
-        }
-        return tb.get(n-1);
-    }
-
-    //
 
 
 
